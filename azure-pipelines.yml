@@ -7,8 +7,7 @@ trigger:
 - master
 
 pool:  
-  agent pool: LinuxPool
-  agent: mylxagent
+  vmImage: ubuntu-latest
 
 variables:
   buildConfiguration: 'Release'
