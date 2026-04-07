@@ -17,6 +17,11 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
+- script: |
+    echo "Listing files..."
+    ls -R
+  displayName: 'Show folder structure'
+
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerConnectionNew'
